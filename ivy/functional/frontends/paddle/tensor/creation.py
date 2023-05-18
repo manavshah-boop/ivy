@@ -55,3 +55,7 @@ def full(shape, fill_value, /, *, dtype=None, name=None):
 def full_like(x, fill_value, /, *, dtype=None, name=None):
     dtype = x.dtype if dtype is None else dtype
     return ivy.full_like(x, fill_value, dtype=dtype)
+
+@to_ivy_arrays_and_back
+def arange(start, end=None, step=1, dtype=None, name=None):
+    return ivy.arange(start, end, step=step, dtype=dtype)
